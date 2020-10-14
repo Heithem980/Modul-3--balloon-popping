@@ -1,0 +1,36 @@
+.box {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+}
+
+.balloon {
+  cursor: pointer;
+  color: red;
+  font-size: 25px;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  margin: 20px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popped {
+  background-color: transparent;
+  color: black;
+}
+h1 {
+  text-align: center;
+}
+
+.afterText {
+  margin: 100px 200px;
+  font-size: 200px;
+  color: green;
+  
+  
+}
