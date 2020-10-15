@@ -1,22 +1,21 @@
-const balloons = document.querySelectorAll(".box");
+const allBalloons = document.querySelector(".wrapper");
+const balloon = document.querySelectorAll(".balloon");
 
 // For each balloon, add eventListener
-balloons.forEach((event) => {
-  event.addEventListener("mouseover", (x) => {
-    x.target.classList.add("popped");
+balloon.forEach((event) => {
+  event.addEventListener("mouseover", (e) => {
+    e.target.classList.add("popped");
 
-    const poppedCount = document.querySelectorAll(".popped").length - 1;
-    console.log(poppedCount);
+    const poppedCount = document.querySelectorAll(".popped").length;
 
     // if total balloons with class "popped" equals 24, display "YAY!"
     if (poppedCount === 24) {
-      const box = document.querySelector(".box");
-      box.innerHTML = "";
+      allBalloons.innerHTML = "";
 
       const h1 = document.createElement("h1");
       h1.textContent = "YAY!";
       h1.classList.add("afterText");
-      box.appendChild(h1);
+      allBalloons.appendChild(h1);
     }
   });
 });
