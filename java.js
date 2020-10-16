@@ -1,8 +1,8 @@
 const allBalloons = document.querySelector(".wrapper");
-const balloon = document.querySelectorAll(".balloon");
+const balloons = document.querySelectorAll(".balloon");
 
 // For each balloon, add eventListener
-balloon.forEach((event) => {
+balloons.forEach((event) => {
   event.addEventListener("mouseover", (e) => {
     e.target.classList.add("popped");
 
